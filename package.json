@@ -1,0 +1,12 @@
+{
+  "name": "alfin-zone-id",
+  "version": "1.0.0",
+  "description": "Personal landing page and ecosystem hub for alfin.zone.id",
+  "scripts": {
+    "dev": "npx wrangler pages dev .",
+    "deploy": "npx wrangler pages deploy . --project-name alfin-zone"
+  },
+  "devDependencies": {
+    "wrangler": "^4.127.0"
+  }
+}
