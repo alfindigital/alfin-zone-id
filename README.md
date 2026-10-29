@@ -1,26 +1,15 @@
-# alfin.zone.id — Personal Ecosystem Hub
+# alfin.zone.id — pengalih ke alfindigital.com
 
-Website personal hub dan portfolio cepat untuk domain **https://alfin.zone.id**.
+Sejak 28 Okt 2026 (KO-14, ACC owner 27 Okt 2026) domain ini **bukan lagi hub/portofolio**. Semua alamat dialihkan permanen (301) ke `https://alfindigital.com/` lewat `_redirects`. Portofolio aktif ada di `https://porto.alfindigital.com` (repo `Apps/Alfindigital`).
 
-## 📍 Lokasi & Infrastruktur
-* **Folder Lokal:** `C:\Users\GEEKOM A8\Documents\Apps\alfin-zone-id`
-* **Hosting:** Cloudflare Pages (Project: `alfin-zone`)
-* **Default URL:** [https://alfin-zone.pages.dev](https://alfin-zone.pages.dev)
-* **Custom Domain:** [https://alfin.zone.id](https://alfin.zone.id)
-* **DNS Provider:** [Zone.ID](https://my.zone.id) (Record CNAME `@` -> `alfin-zone.pages.dev`)
-* **SSL:** Google Trust Services via Cloudflare Edge (Auto-renew)
+`index.html` hanya sisa versi hub lama dan tidak tampil ke pengunjung selama `_redirects` aktif.
 
-## 🛠 Cara Edit & Deploy Ulang
-1. Edit file `index.html` langsung di folder ini untuk mengubah teks, link, atau menambahkan kartu baru.
-2. Buka terminal di folder ini dan jalankan:
-   ```bash
-   npm run deploy
-   ```
-   *(Atau `npx wrangler pages deploy . --project-name alfin-zone`)*
-3. Perubahan akan langsung live dalam beberapa detik di `alfin.zone.id` dan `alfin-zone.pages.dev`.
+## Infrastruktur
+* **Folder lokal:** `C:\Users\GEEKOM A8\Documents\Apps\alfin-zone-id`
+* **Hosting:** Cloudflare Pages (project `alfin-zone`), default `https://alfin-zone.pages.dev`
+* **DNS:** [Zone.ID](https://my.zone.id), CNAME `@` -> `alfin-zone.pages.dev`
 
-## 💻 Testing Lokal (Preview)
-```bash
-npm run dev
-```
-Buka `http://localhost:8788` di browser.
+## Ubah tujuan pengalihan
+1. Edit `_redirects`.
+2. `npx wrangler pages deploy . --project-name alfin-zone`
+3. Cek: `curl -sI https://alfin.zone.id/` harus `301` dengan `location` yang baru.
